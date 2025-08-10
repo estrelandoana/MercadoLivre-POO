@@ -1,0 +1,49 @@
+# === IntelliJ IDEA ===
+.idea/                # Pasta com configurações locais da IDE
+*.iml                 # Arquivos de módulo do IntelliJ
+*.iws
+*.ipr
+
+# === Sistema operacional ===
+.DS_Store             # macOS
+Thumbs.db             # Windows
+
+# === Compilação Java ===
+*.class
+*.jar
+*.war
+*.ear
+target/               # Diretório de build do Maven
+build/                # Diretório de build do Gradle
+
+# === Logs e arquivos temporários ===
+*.log
+*.tmp
+*.swp                 # Arquivos temporários de editores
+*.bak
+
+# === IDEs/Tools adicionais ===
+.vscode/              # Se alguém usar o VS Code
+*.classpath
+*.project
+*.settings/
+*.factorypath
+.apt_generated/
+
+# === Diretórios comuns que não precisam ser versionados ===
+bin/
+out/                  # Saída de compilação comum em projetos simples
+tmp/
+dist/
+
+# === Arquivos pessoais e sensíveis ===
+*.env
+*.local
+
+# === Relatórios de testes (se for usar futuramente) ===
+test-output/
+coverage/
+
+# === Outros ===
+replay_pid*
+hs_err_pid*
