@@ -4,15 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Filme {
-    private String nome;
+    private String titulo;
     private String dataLancamento;
     private double orcamento;
     private String descricao;
     private Diretor diretor;
     private List<Ator> atores;
 
-    public Filme(String nome, String dataLancamento,double orcamento, String descricao, Diretor diretor) {
-        this.nome = nome;
+    public Filme(String titulo, String dataLancamento,double orcamento, String descricao, Diretor diretor) {
+        this.titulo = titulo;
         this.dataLancamento = dataLancamento;
         this.orcamento = orcamento;
         this.descricao = descricao;
@@ -20,12 +20,12 @@ public class Filme {
         this.atores = new ArrayList<>();
     }
 
-    public String getNome() {
-        return nome;
+    public String getTitulo() {
+        return titulo;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setTitulo(String nome) {
+        this.titulo = titulo;
     }
 
     public String getDataLancamento() {
@@ -71,7 +71,7 @@ public class Filme {
     public String mostrarInfo() {
         StringBuilder sb = new StringBuilder();
         sb.append("Filme\n");
-        sb.append("Nome: ").append(nome).append("\n");
+        sb.append("Título: ").append(titulo).append("\n");
         sb.append("Data de Lançamento: ").append(dataLancamento).append("\n");
         sb.append("Orçamento: ").append(orcamento).append("\n");
         sb.append("Descrição: ").append(descricao).append("\n\n");

@@ -25,8 +25,8 @@ public class Catalogo {
         filmes.add(filme);
     }
 
-    public boolean associarAtorFilme(String nomeFilme, String nomeAtor) {
-        Filme filme = buscarFilmePorNome(nomeFilme);
+    public boolean associarAtorFilme(String tituloFilme, String nomeAtor) {
+        Filme filme = buscarFilmePorNome(tituloFilme);
         Ator ator = buscarAtorPorNome(nomeAtor);
         if (filme != null && ator != null) {
             filme.adicionarAtor(ator);
@@ -35,8 +35,8 @@ public class Catalogo {
         return false;
     }
 
-    public boolean associarDiretorFilme(String nomeFilme, String nomeDiretor) {
-        Filme filme = buscarFilmePorNome(nomeFilme);
+    public boolean associarDiretorFilme(String tituloFilme, String nomeDiretor) {
+        Filme filme = buscarFilmePorNome(tituloFilme);
         Diretor diretor = buscarDiretorPorNome(nomeDiretor);
         if (filme != null && diretor != null) {
             filme.setDiretor(diretor);
@@ -45,9 +45,9 @@ public class Catalogo {
         return false;
     }
 
-    public Filme buscarFilmePorNome(String nome) {
+    public Filme buscarFilmePorNome(String titulo) {
         for (Filme filme : filmes) {
-            if (filme.getNome().equalsIgnoreCase(nome)) {
+            if (filme.getTitulo().equalsIgnoreCase(titulo)) {
                 return filme;
             }
         }
